@@ -1,0 +1,10 @@
+<template>
+<ul>
+  <li repeat.for="todo of todos">
+    <input type="checkbox" checked.bind="todo.isCompleted" /> 
+      <span css="text-decoration: ${todo.isCompleted? 'line-through' : ''}">${todo.message}</span>
+  </li>
+  <input type="text" value.bind="newItem"/><button>Add todo</button>
+</ul>
+  
+</template>
